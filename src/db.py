@@ -95,7 +95,7 @@ class DataBase:
             return self.db[uid]['redflags']
         return None
 
-    def saveIntervention(self, uid, data):
+    def saveIntervention(self, uid: str, data: Dict) -> Dict:
         user = self.checkUserID(uid)
         if user is None:
             return None
