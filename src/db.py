@@ -16,6 +16,7 @@ class DataBase:
         uid = self.generateRandomId()
         try:
             self.db[uid] = data
+            self.db[uid]['id'] = uid
             return True
         except KeyError:
             return False
